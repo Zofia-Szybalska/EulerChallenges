@@ -17,7 +17,12 @@ namespace Project_Euler
             for (int a = 0; a <= (number.Length - 13); a++) 
             {
                 string czesc = number.Substring(a, 13);
-                Int64 liczba = Int64.Parse(czesc);
+                long liczba = 1;
+                foreach(char cyfra in czesc)
+                {
+                    long mnoznik = long.Parse(cyfra.ToString());
+                    liczba *= mnoznik;
+                }
                 
                 max = Math.Max(liczba, max); 
             }

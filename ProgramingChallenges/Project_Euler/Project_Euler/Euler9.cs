@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Project_Euler
@@ -8,7 +9,10 @@ namespace Project_Euler
     {
         public static void Calculate()
         {
-
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            
+            stopwatch.Stop();
+            Console.WriteLine("Time : {0}", stopwatch.Elapsed);
         }
     }
 }
