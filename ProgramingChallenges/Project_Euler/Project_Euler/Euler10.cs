@@ -34,6 +34,10 @@ namespace Project_Euler
                 }
 
             }
+            if(primenumbers[primenumbers.Count() - 1] > 2000000)
+            {
+                primenumbers.RemoveAt(primenumbers.Count() - 1);
+            }
             Console.WriteLine("Result 10 : {0}", primenumbers.Sum());
             stopwatch.Stop();
             Console.WriteLine("Time : {0}", stopwatch.Elapsed);
