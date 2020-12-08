@@ -8,7 +8,7 @@ namespace Project_Euler
 
         static void Main(string[] args)
         {
-            Console.WriteLine("With Euler do you want to run? \nEnter number from 1 to 9.");
+            Console.WriteLine("With Euler do you want to run? \nEnter number from 1 to 10.");
             int euler; 
             etykieta:
             string temp = Console.ReadLine();
@@ -43,9 +43,12 @@ namespace Project_Euler
                     case 9:
                         Euler9.Calculate();
                         break;
+                    case 10:
+                        Euler10.Calculate();
+                        break;
 
                     default:
-                        Console.WriteLine("Enter number from 1 to 9, please.");
+                        Console.WriteLine("Enter number from 1 to 10, please.");
                         goto etykieta;
 
                 }
