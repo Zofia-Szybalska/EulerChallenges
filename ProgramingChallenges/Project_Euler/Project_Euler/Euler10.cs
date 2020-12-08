@@ -13,9 +13,8 @@ namespace Project_Euler
 
             Stopwatch stopwatch = Stopwatch.StartNew();
             long number = 2;
-            List<long> primenumbers = new List<long>();
-            primenumbers.Add(2);
-            while( primenumbers[primenumbers.Count()-1] < 2000000)
+            long primenumberssum = 2;
+            while( number < 2000000)
             {
                 for (int dzielnik = 2; dzielnik <= Math.Sqrt(number) + 1; dzielnik++)
                 {
@@ -23,19 +22,19 @@ namespace Project_Euler
                     {
                         number++;
                         dzielnik = 1;
-                    }
-                    
+                    }                    
 
                 }
-                primenumbers.Add(number);
+                primenumberssum += number;
                 number++;
 
             }
-            if(primenumbers[primenumbers.Count() - 1] > 2000000)
+            if (number > 2000000)
             {
-                primenumbers.RemoveAt(primenumbers.Count() - 1);
+                primenumberssum -= number - 1;
             }
-            Console.WriteLine("Result 10 : {0}", primenumbers.Sum());
+          
+            Console.WriteLine("Result 10 : {0}", primenumberssum);
             stopwatch.Stop();
             Console.WriteLine("Time : {0}", stopwatch.Elapsed);
         }
