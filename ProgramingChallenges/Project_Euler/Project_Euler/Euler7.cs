@@ -22,14 +22,10 @@ namespace Project_Euler
                         number++;
                         dzielnik = 1;
                     }
-                    else if (number % dzielnik != 0 && dzielnik >= Math.Sqrt(number))
-                    {
-                        primenumbers.Add(number);
-                        number++;
-                        break;
-                    }
                
                 }
+                primenumbers.Add(number);
+                number++;
 
             }
             Console.WriteLine("Result 7 : {0}", primenumbers[10000]);
