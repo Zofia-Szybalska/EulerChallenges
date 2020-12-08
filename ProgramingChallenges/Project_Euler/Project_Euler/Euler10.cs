@@ -13,9 +13,11 @@ namespace Project_Euler
 
             Stopwatch stopwatch = Stopwatch.StartNew();
             long number = 2;
-            long primenumberssum = 2;
+            long primenumberssum = 0;
             while( number < 2000000)
             {
+                primenumberssum += number;
+                number++;
                 for (int dzielnik = 2; dzielnik <= Math.Sqrt(number) + 1; dzielnik++)
                 {
                     if (number % dzielnik == 0)
@@ -25,15 +27,8 @@ namespace Project_Euler
                     }                    
 
                 }
-                primenumberssum += number;
-                number++;
 
             }
-            if (number > 2000000)
-            {
-                primenumberssum -= number - 1;
-            }
-          
             Console.WriteLine("Result 10 : {0}", primenumberssum);
             stopwatch.Stop();
             Console.WriteLine("Time : {0}", stopwatch.Elapsed);
