@@ -21,7 +21,7 @@ namespace Project_Euler
                     {
                         break;
                     }
-                    else if (primenumber >= Math.Sqrt(number))
+                    else if (primenumber > Math.Sqrt(number))
                     {
                         primenumbers.Add(number);
                         break;
