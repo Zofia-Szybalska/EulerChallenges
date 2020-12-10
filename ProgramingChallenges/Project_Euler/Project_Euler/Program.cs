@@ -47,7 +47,7 @@ namespace Project_Euler
                     Euler9.Calculate();
                     goto etykieta;
                 case 10:
-                    Euler10.Calculate();
+                    Euler10_2.Calculate();
                     goto etykieta;
                 case 11:
                     Euler11.Calculate();

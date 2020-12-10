@@ -10,7 +10,6 @@ namespace Project_Euler
     {
         public static void Calculate()
         {
-
             Stopwatch stopwatch = Stopwatch.StartNew();
             long number = 2;
             long primenumberssum = 0;
