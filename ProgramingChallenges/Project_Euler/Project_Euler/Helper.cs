@@ -62,5 +62,27 @@ namespace Project_Euler
             return sum;
         }
         
+        public static bool IsPrime(long number)
+        {
+            if (number % 2 == 0)
+            {
+                return false;
+            }
+            else if (number <= 1)
+            {
+                return false;
+            }
+            else
+            {
+                for(int i = 2; i <= Math.Sqrt(number); i++)
+                {
+                    if(number%i==0)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
 }

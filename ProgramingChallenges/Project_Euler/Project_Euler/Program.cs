@@ -9,7 +9,7 @@ namespace Project_Euler
         {
             int euler;
         etykieta:
-            Console.WriteLine("With Euler do you want to run? \nEnter number from 1 to 10. Type 0 to end.");
+            Console.WriteLine("With Euler do you want to run? \nEnter number from 1 to 13. Type 0 to end.");
 
 
             string temp = Console.ReadLine();
@@ -54,6 +54,9 @@ namespace Project_Euler
                     goto etykieta;
                 case 12:
                     Euler12.Calculate();
+                    goto etykieta;
+                case 13:
+                    Euler13.Calculate();
                     goto etykieta;
 
                 default:

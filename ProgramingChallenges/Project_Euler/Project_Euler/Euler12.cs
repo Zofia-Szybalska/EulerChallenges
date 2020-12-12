@@ -10,12 +10,12 @@ namespace Project_Euler
         public static void Calculate()
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            int trianglenumbersnumber = 8;
-            long trianglenumber = 0;
-            for(int factorsamount = 2; factorsamount < 500; trianglenumbersnumber++)
+            int naturalnumber = 8;
+            long trianglenumber = 28;
+            for(int factorsamount = 2; factorsamount < 500; naturalnumber++)
             {
                 factorsamount = 2;
-                trianglenumber = Helper.GetNaturalNumbersSum(trianglenumbersnumber);
+                trianglenumber += naturalnumber;
                 for(int factor = 2; factor < trianglenumber; factor++)
                 {
                     if(trianglenumber % factor == 0)
@@ -28,6 +28,15 @@ namespace Project_Euler
             Console.WriteLine("Result 12 : {0}", trianglenumber);
             stopwatch.Stop();
             Console.WriteLine("Time : {0}", stopwatch.Elapsed);
+        }
+        private static long GetNaturalNumbersSum (int l)
+        {
+            long result = 0;
+            for(int i = 1; i <= l; i++)
+            {
+                result += i;
+            }
+            return result;
         }
     }
 }
